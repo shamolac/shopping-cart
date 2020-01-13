@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: block;
+    padding: 60px 40px;
+}
+
+header.primary {
+	background: #3f51b5;
+	height: 60px;
+	color: #fff;
+	padding: 15px 30px;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1 {
+    width: 60%;
+}
+header h1 a {
+    color: #fff;
+}
+header .shop-button {
+	width: 50px;
+}
+
+.shop-button img {
+    height: 40px;
+}
+
+a { 
+	text-decoration: none;
+ }
+button {
+    height: 40px;
+}
+
+
+
+ .table, .cart-item {
+ 	display: flex;
+ 	flex-wrap: wrap;
+ }
+
+ .table-cell {
+    width: 240px;
+    flex-grow: 1;
+    max-width: 241px;
+}
+
+.table-cell + .table-cell {
+	margin-left: 2%;
+}
+
+.main-container .ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #3f51b5;
+    color: #fff;
+    cursor: default;
+}
+
+ul.ngx-pagination {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cart-item.table-cell {
+    flex-direction: column;
+}
+.cart-item strong, .cart-item span {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.cart-item button {
+    margin-bottom: 60px;
+}
+
+.total {
+    text-align: right;
+    width: 100%;
+    border-top: 1px solid #999;
+    padding: 40px;
+}
+
+.action-buttons button+button {
+    margin-left: 40px;
+}

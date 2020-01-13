@@ -1,0 +1,19 @@
+
+  <div class="container">
+  	<app-search [(searchModel)]="searchModel"></app-search>
+  	<div class="table">
+      	<div *ngFor="let product of products | productsFilter: searchModel | paginate: { itemsPerPage: 10, currentPage: p }" class="table-cell">
+      		<p *ngIf="product === -1">No results found.</p>
+      		<a [title]="product.title" [routerLink]="['/product-details', product.id]">
+      		  <img src='{{product.image_url}}' alt="{{product.title}}" />
+      		  <h3>
+      		    {{product.title}}
+      		  </h3>
+      		  <p>{{product.price | currency }}</p>
+      		</a>
+      	</div>
+      </div>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+ 
+  </div>

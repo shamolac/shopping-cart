@@ -1,0 +1,15 @@
+<div class="table">
+	<p *ngIf="!localItems">Your cart is empty. </p>
+	
+	<div class="cart-item table-cell" *ngFor="let item of localItems" >
+		<img *ngIf="item.image_url" src='{{item.image_url}}' />
+		<strong>{{item.title}}</strong>
+		<span>{{item.price | currency }}</span>
+	<button mat-flat-button color="primary" (click)="removeItem(item.id)">Remove Item</button>
+    </div>
+    <div class="total">Total Price: {{totalPrice | currency }} </div>
+    <div class="action-buttons">
+    	<button *ngIf="localItems" mat-flat-button color="warn" (click)="gotoCart()">Empty Your Cart</button>
+    	<button mat-flat-button color="accent" (click)="goShopping()">Continue Shopping</button>
+    </div>
+</div>
